@@ -10,7 +10,6 @@
     <div id="content"></div>
 
 <script>
-//ここに音声認識の処理を書いていく
 const speech = new webkitSpeechRecognition();
 speech.lang = 'ja-JP';
 
@@ -18,7 +17,6 @@ const btn = document.getElementById('btn');
 const content = document.getElementById('content');
 
 btn.addEventListener('click' , function() {
-    // 音声認識をスタート
     speech.start();
 });
 
