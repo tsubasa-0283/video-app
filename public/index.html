@@ -1,12 +1,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>SkyWay - Video chat example</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
-  <script type="text/javascript" src="../key.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <title>Web Conferencing System</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style2.css">
 </head>
 
 <body>
@@ -21,7 +18,7 @@
 
   <!-- Steps -->
   <div class="pure-u-1-3">
-    <h2>SkyWay Video Chat</h2>
+    <h2>Web会議システム</h2>
 
     <div class="select">
       <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
@@ -45,21 +42,32 @@
     <div id="step2">
       <h3>Make a call</h3>
       <form id="make-call" class="pure-form">
+        <input type="text" placeholder="Username" id="username"><br>
         <input type="text" placeholder="Join room..." id="join-room">
-        <button class="pure-button pure-button-success" type="submit">Join</button>
+        <button  id="join" class="pure-button pure-button-success" type="submit">Join</button>
       </form>
       <p><strong>Warning:</strong> You may connect with people you don't know if you both use the same room name.</p>
       <p><strong>注意：</strong>同じルーム名を使用した場合、知らない人と接続する可能性があります。</p>
+      
     </div>
 
     <!-- Call in progress -->
     <div id="step3">
       <p>Currently in room <span id="room-id">...</span></p>
       <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+      <div id="output"></div>
     </div>
   </div>
 </div>
 
-
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/script2.js"></script>
 </body>
 </html>
